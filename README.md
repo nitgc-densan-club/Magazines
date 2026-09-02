@@ -48,6 +48,8 @@ URLが少し特殊です。以下の形式に合わせて入力してくださ�
 
 GitHub Pagesに反映させるために再ビルドとデプロイを行います。
 
+nitgc-densan-club.github.ioのリポジトリに移動してください。
+
 GitHub Actionsに移動し、"Deploy to GitHub Pages"というタブをクリックします。
 
 右側に"Run workflow"というメニューがあり、その中の"Run workflow"というボタンを押します。

@@ -1,7 +1,5 @@
 # D 言語
 
----
-
 電算部が今まで発行した D 言語です。
 
 raw ディレクトリには無圧縮の PDF が入っています。
@@ -13,3 +11,49 @@ raw ディレクトリには無圧縮の PDF が入っています。
 - 2019 年度版：GitLab で公開されているソースコードを LaTeX でコンパイルし直しました。
 
 - 2013 年度版：Microsoft to PDF によってアウトライン化を行いました。そのためこれだけファイルサイズが巨大です。（通常は 1MB 程度、2013 年度版は約 13MB。）
+
+# サイトへの反映方法
+
+## ファイルのアップロード
+
+このリポジトリに部誌のPDFファイルをアップロードします。
+
+基本的にルートディレクトリに置いてください。rawディレクトリには圧縮前等の元データをアップロードしていましたが、サイトには全く関係ないので必要がなければ気にしなくて大丈夫です。
+
+<img width="1920" height="1032" alt="2026-09-02" src="https://github.com/user-attachments/assets/a0f4073f-c775-4624-b39b-222271f84f58" />
+
+PDFファイルをアップロードしてください。
+
+<img width="1920" height="1032" alt="2026-09-02 (2)" src="https://github.com/user-attachments/assets/0328504e-49c8-4b8a-8e0c-35f22b1f27b8" />
+
+PDFファイルがアップロードされたことを確認してください。
+
+## microCMSへの追加
+
+※microCMSが見れないので記憶で書いてます
+
+部誌用のAPIがあるので移動し、右上の"+追加"というボタンを押してください。
+
+タイトル・発行日・URLとなっていると思います。
+
+タイトルと発行日はそのまま入力してください。
+
+URLが少し特殊です。以下の形式に合わせて入力してください。（*****.pdfがアップロードしたファイルと同じになるように変更します）
+
+`https://raw.githubusercontent.com/nitgc-densan-club/Magazines/main/*****.pdf`
+
+右上の"公開"を押してmicroCMSへの追加は完了です。
+
+## ビルド・デプロイ
+
+GitHub Pagesに反映させるために再ビルドとデプロイを行います。
+
+GitHub Actionsに移動し、"Deploy to GitHub Pages"というタブをクリックします。
+
+右側に"Run workflow"というメニューがあり、その中の"Run workflow"というボタンを押します。
+
+<img width="1920" height="1032" alt="2026-09-02 (3)" src="https://github.com/user-attachments/assets/b718cbb6-073a-43e1-b4b8-682694bd1bbc" />
+
+workflowが成功すれば無事にビルドとデプロイができています。
+
+※ビルド・デプロイはニュースや記事等、microCMS上で変更を加えた場合で同様に行ってください。
